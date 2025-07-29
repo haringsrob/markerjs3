@@ -73,7 +73,10 @@ export class RectangularBoxMarkerBaseEditor<
    * Active grip during manipulation
    */
   protected activeGrip?: Grip;
-  private disableRotation = false;
+  /**
+   * Set to true to disable rotation capabilities.
+   */
+  protected disableRotation = false;
 
   public ownsTarget(el: EventTarget): boolean {
     if (super.ownsTarget(el) || this._marker.ownsTarget(el)) {
